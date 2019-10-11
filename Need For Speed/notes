@@ -1,0 +1,33 @@
+$ r2 ./need-for-speed
+ -- The door is everything ...
+[0x000006b0]> aaaa
+[x] Analyze all flags starting with sym. and entry0 (aa)
+[x] Analyze function calls (aac)
+[x] Analyze len bytes of instructions for references (aar)
+[x] Check for objc references
+[x] Check for vtables
+[x] Type matching analysis for all functions (aaft)
+[x] Use -AA or aaaa to perform additional experimental analysis.
+[x] Finding function preludes
+[x] Enable constraint types analysis for variables
+[0x000006b0]>  pdf @ 0x00000841
+/ (fcn) sym.calculate_key 29
+|   sym.calculate_key ();
+|           ; var uint32_t var_4h @ rbp-0x4
+|           ; CALL XREF from sym.get_key @ 0x8ec
+|           0x00000841      55             push rbp
+|           0x00000842      4889e5         mov rbp, rsp
+|           0x00000845      c745fcd33fbe.  mov dword [var_4h], 0xedbe3fd3
+|           ; CODE XREF from sym.calculate_key @ 0x857
+|       .-> 0x0000084c      836dfc01       sub dword [var_4h], 1
+|       :   0x00000850      817dfcd33fbe.  cmp dword [var_4h], 0xedbe3fd3
+|       `=< 0x00000857      75f3           jne 0x84c
+|           0x00000859      8b45fc         mov eax, dword [var_4h]
+|           0x0000085c      5d             pop rbp
+\           0x0000085d      c3             ret
+^C
+[0x000006b0]> 
+[0x000006b0]> oo+
+[0x000006b0]>  wa mov dword [rbp-0x4], 0xedbe3fd4 @ 0x00000845
+
+PICOCTF{Good job keeping bus #37165c02 speeding along!}

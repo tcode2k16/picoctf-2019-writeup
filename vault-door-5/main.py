@@ -1,0 +1,3 @@
+data  = 'JTYzJTMwJTZlJTc2JTMzJTcyJTc0JTMxJTZlJTY3JTVmJTY2JTcyJTMwJTZkJTVmJTYyJTYxJTM1JTY1JTVmJTM2JTM0JTVmJTM3JTM1JTMyJTMwJTMyJTMxJTM5JTM1'
+# picoCTF{c0nv3rt1ng_fr0m_ba5e_64_75202195}
+print data.decode('base64').replace('%','').decode('hex')

@@ -1,0 +1,15 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Sep 28 01:36:41 2019
+Invocation: foremost m 
+Output directory: /home/alanc/CTF/2019/pico/c0rrupt/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: stdin
+Start: Sat Sep 28 01:36:41 2019
+Length: Unknown
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Interrupt received at Sat Sep 28 01:36:44 2019
